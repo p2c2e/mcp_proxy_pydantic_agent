@@ -2,8 +2,10 @@ import asyncio
 import json
 from typing import Optional, Dict, List, Union, Any
 from contextlib import AsyncExitStack
+from colorama import init, Fore, Style
 
 from mcp import ClientSession, StdioServerParameters
+init(autoreset=True)  # Initialize colorama with autoreset=True
 from pydantic import BaseModel
 from pydantic_ai import Agent, RunContext
 from pydantic_ai.tools import Tool, ToolDefinition
@@ -165,28 +167,28 @@ class MCPClient:
                     messages=messages,
                 )
 
-                final_text.append(response.content[0].text)
+                final_text.append(f"{Style.BRIGHT}{Fore.CYAN}{response.content[0].text}")
 
         return "\n".join(final_text)
 
     async def chat_loop(self):
         """Run an interactive chat loop"""
-        print("\nMCP Client Started!")
-        print("Type your queries or 'quit' to exit.")
+        print(f"{Fore.WHITE}\nMCP Client Started!")
+        print(f"{Fore.WHITE}Type your queries or 'quit' to exit.")
         
         while True:
             try:
-                query = input("\nQuery: ").strip()
+                query = input(f"\n{Fore.RED}Query: {Fore.LIGHTGREEN_EX}").strip()
                 
                 if query.lower() in ['quit', 'exit', 'bye', 'goodbye']:
                     print("\nGoodbye!")
                     break
                     
                 response = await self.process_query(query)
-                print("\n" + response)
+                print(f"\n{Fore.YELLOW}{response}")
                     
             except Exception as e:
-                print(f"\nError: {str(e)}")
+                print(f"\n{Fore.RED}Error: {str(e)}")
     
     async def cleanup(self):
         """Clean up resources"""
