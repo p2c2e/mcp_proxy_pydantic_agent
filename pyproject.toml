@@ -1,0 +1,14 @@
+[project]
+name = "mcp-proxy-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=0.42.0",
+    "httpx>=0.28.1",
+    "mcp>=1.1.1",
+    "mcp-server-time>=0.6.2",
+    "pydantic-ai>=0.0.12",
+    "python-dotenv>=1.0.1",
+]
