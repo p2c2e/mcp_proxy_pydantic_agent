@@ -1,7 +1,7 @@
 [project]
-name = "mcp-proxy-agent"
+name = "mcp-proxy-pydantic-agent"
 version = "0.1.0"
-description = "Add your description here"
+description = "Sample to show to integrate MCP (Model Context Protocl) servers with Pydantic.AI"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
