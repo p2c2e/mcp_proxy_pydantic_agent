@@ -1,5 +1,5 @@
 
-## Sample to show to integrate MCP (Model Context Protocl) servers with Pydantic.AI
+## Sample to show to integrate MCP (Model Context Protocol) servers with Pydantic.AI
 
 
 Parts of this example uses content from : https://github.com/modelcontextprotocol/quickstart-resources.git - Esp. the weather 'server' code
@@ -14,4 +14,12 @@ The pyproject.toml assumes you are using 'uv' package manager
 1. uv sync
 3. cd mc-client
 2. uv run client.py
+
+Now, try interacting with some questions like:
+
+> What is the time in NY when it is 7:30pm in Bangalore?
+
+> What is the Weather currently in Chicago?
+
+(and quit when done)
 
