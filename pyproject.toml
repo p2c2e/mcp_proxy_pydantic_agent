@@ -8,8 +8,10 @@ dependencies = [
     "anthropic>=0.42.0",
     "colorama>=0.4.6",
     "httpx>=0.28.1",
+    "langgraph>=0.3.2",
     "mcp>=1.1.1",
     "mcp-server-time>=0.6.2",
+    "nest-asyncio>=1.6.0",
     "pydantic-ai>=0.0.12",
     "python-dotenv>=1.0.1",
 ]

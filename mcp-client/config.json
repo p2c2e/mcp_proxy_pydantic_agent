@@ -1,10 +1,17 @@
 {
   "mcpServers": {
     "timezone": {
+      "description": "MCP server for timezone can convert between timezones",
       "command": "python",
       "args": ["-m", "mcp_server_time", "--local-timezone=America/New_York"]
     },
+    "joker": {
+      "description": "Fetches jokes - general and the Dad joke variation",
+      "command": "python",
+      "args": ["../jokes/joke_server.py"]
+    },
     "weather": {
+      "description": "Fetches weather data from a weather server",
       "command": "python",
       "args": ["../weather-server-python/src/weather/server.py"]
     }
