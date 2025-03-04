@@ -15,6 +15,8 @@ The pyproject.toml assumes you are using 'uv' package manager
 3. cd mc-client
 2. uv run client.py
 
+(Alternatively try client2.py - this uses only PydanticAI - no direct dep on  Anthropic libs)
+
 Now, try interacting with some questions like:
 
 > What is the time in NY when it is 7:30pm in Bangalore?
