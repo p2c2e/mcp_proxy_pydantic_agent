@@ -12,8 +12,9 @@ The pyproject.toml assumes you are using 'uv' package manager
 ### Steps to run
 1. Clone this repo
 1. uv sync
-3. cd mc-client
-2. uv run client.py
+3. cd mcp-client
+2. uv run client.py (this requires openai and anthropic keys and uses anthropic libs directly)
+2. uv run client2.py (for pure pydantic and works with any fn calling LLM)
 
 (Alternatively try client2.py - this uses only PydanticAI - no direct dep on  Anthropic libs)
 
